@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科技新闻资讯</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* 容器样式 */
+       .container {
+            width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* 标题样式 */
+        h1 {
+            text-align: center;
+            color: #e74c3c;
+            margin-bottom: 30px;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        /* 分割线样式 */
+        hr {
+            border: 0;
+            height: 2px;
+            background-color: #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        /* 内容布局 */
+       .content {
+            display: flex;
+        }
+
+        /* 左列样式 */
+       .left-column {
+            flex: 2;
+            padding-right: 30px;
+        }
+
+        /* 右列样式 */
+       .right-column {
+            flex: 1;
+            border-left: 1px solid #e0e0e0;
+            padding-left: 30px;
+        }
+
+        /* 新闻项样式 */
+       .news-item {
+            margin-bottom: 40px;
+            border-bottom: 1px dashed #e0e0e0;
+            padding-bottom: 30px;
+        }
+
+       .news-item:last-child {
+            border-bottom: none;
+        }
+
+        /* 新闻标题样式 */
+       .news-item h3 {
+            color: #3498db;
+            margin-top: 0;
+            font-size: 22px;
+            transition: color 0.3s ease;
+        }
+
+       .news-item h3:hover {
+            color: #2980b9;
+        }
+
+        /* 新闻图片样式 */
+       .news-images {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+       .news-images img {
+            width: 48%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 作者信息样式 */
+       .author {
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* 热门新闻样式 */
+       .hot-news {
+            margin-bottom: 30px;
+        }
+
+        /* 热门新闻链接样式 */
+       .hot-news a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+       .hot-news a:hover {
+            color: #c0392b;
+            text-decoration: underline;
+        }
+
+        /* 热门新闻图片样式 */
+       .hot-news img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 相关热文推荐标题样式 */
+        h4 {
+            color: #e74c3c;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>科技新闻资讯</h1>
+        <hr>
+        
+        <div class="content">
+            <div class="left-column">
+                <div class="news-item">
+                    <h3>人工智能技术取得重大突破</h3>
+                    <div class="news-images">
+                        <img src="c:/Users/zdw33/OneDrive/图片/Screenshots/微信图片_20240822003029.jpg" alt="AI技术图片1">
+                        <img src="c:/Users/zdw33/OneDrive/图片/Screenshots/vr.jpg" alt="AI技术图片2">
+                    </div>
+                    <p class="author">作者：张科技 | 发布时间：2023-06-15</p>
+                </div>
+                
+                <div class="news-item">
+                    <h3>新一代智能手机发布</h3>
+                    <div class="news-images">
+                        <img src="c:/Users/zdw33/OneDrive/图片/Screenshots/手机.jpg" alt="手机图片1">
+                        <img src="c:/Users/zdw33/OneDrive/图片/Screenshots/手机2.jpg" alt="手机图片2">
+                    </div>
+                    <p class="author">作者：李数码 | 发布时间：2023-06-14</p>
+                </div>
+                
+                <div class="news-item">
+                    <h3>量子计算机研究新进展</h3>
+                    <div class="news-images">
+                        <img src="c:/Users/zdw33/OneDrive/图片/Screenshots/量子计算机.jpg" alt="量子计算机图片1">
+                        <img src="c:/Users/zdw33/OneDrive/图片/Screenshots/11111.jpg" alt="量子计算机图片2">
+                    </div>
+                    <p class="author">作者：王科学 | 发布时间：2023-06-13</p>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <h4>相关热文推荐</h4>
+                
+                <div class="hot-news">
+                    <a href="https://zhuanlan.zhihu.com/p/272558998">5G技术将如何改变我们的生活</a>
+                    <img src="c:/Users/zdw33/OneDrive/图片/Screenshots/5g.jpg" alt="5G技术图片">
+                </div>
+                
+                <div class="hot-news">
+                    <a href="https://baike.baidu.com/item/%e8%99%9a%e6%8b%9f%e7%8e%b0%e5%ae%9e/207123">虚拟现实在教育领域的应用前景</a>
+                    <img src="c:/Users/zdw33/OneDrive/图片/Screenshots/ai1.jpg" alt="VR教育图片">
+                </div>
+                
+                <div class="hot-news">
+                    <a href="https://www.thepaper.cn/newsDetail_forward_22139571">区块链技术的最新发展趋势</a>
+                    <img src="c:/Users/zdw33/OneDrive/图片/Screenshots/区块链.jpg" alt="区块链图片">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
