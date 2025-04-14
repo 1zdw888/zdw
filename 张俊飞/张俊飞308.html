@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合网页设计</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+        }
+
+        /* 任务一：知识点视图 */
+        .knowledge-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .knowledge-container {
+            position: relative;
+            width: 1000px;
+            height: 600px;
+        }
+
+        .center-icon {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            background: url('https://i.imgur.com/example-bg.png') center/cover;
+            margin: 190px auto;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .knowledge-box {
+            position: absolute;
+            width: 260px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            z-index: 2;
+        }
+
+        .knowledge-box ul {
+            list-style: none;
+            padding: 15px 0;
+        }
+
+        .knowledge-box li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        /* 定位三个知识框 */
+        .box1 { top: 15%; left: 10%; }
+        .box2 { top: 15%; right: 10%; }
+        .box3 { bottom: 15%; left: 50%; transform: translateX(-50%); }
+
+        /* 任务二：新闻网页 */
+        .news-section {
+            padding: 40px 20px;
+            background: white;
+        }
+
+        .news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-title {
+            text-align: center;
+            color: #e74c3c;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .news-hr {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #4a90e2, #e74c3c);
+            margin: 30px 0;
+        }
+
+        .news-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* 左侧新闻区 */
+        .left-column {
+            flex: 2;
+        }
+
+        .news-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .news-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .news-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* 右侧推荐区 */
+        .right-column {
+            flex: 1;
+            padding-left: 30px;
+            border-left: 2px solid #eee;
+        }
+
+        .hot-news {
+            margin-bottom: 25px;
+        }
+
+        .hot-news a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .hot-news a:hover {
+            color: #e74c3c;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .knowledge-container {
+                height: auto;
+                padding: 20px;
+            }
+
+            .knowledge-box {
+                position: static;
+                width: 100%;
+                margin: 20px 0;
+                transform: none !important;
+            }
+
+            .news-content {
+                flex-direction: column;
+            }
+
+            .right-column {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 任务一：知识点视图 -->
+    <section class="knowledge-section">
+        <div class="knowledge-container">
+            <div class="center-icon"></div>
+            
+            <div class="knowledge-box box1">
+                <h3>面向对象特性</h3>
+                <ul>
+                    <li>抽象与封装</li>
+                    <li>继承机制</li>
+                    <li>多态实现</li>
+                    <li>类与对象</li>
+                </ul>
+            </div>
+
+            <div class="knowledge-box box2">
+                <h3>核心概念</h3>
+                <ul>
+                    <li>构造函数</li>
+                    <li>析构函数</li>
+                    <li>模板编程</li>
+                    <li>异常处理</li>
+                </ul>
+            </div>
+
+            <div class="knowledge-box box3">
+                <h3>高级特性</h3>
+                <ul>
+                    <li>智能指针</li>
+                    <li>多线程</li>
+                    <li>Lambda表达式</li>
+                    <li>STL容器</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 任务二：新闻资讯 -->
+    <section class="news-section">
+        <div class="news-container">
+            <h1 class="news-title">每日新闻资讯</h1>
+            <hr class="news-hr">
+
+            <div class="news-content">
+                <div class="left-column">
+                    <div class="news-item">
+                        <h3>人工智能新突破</h3>
+                        <div class="news-images">
+                            <img src="https://via.placeholder.com/600x400" alt="AI技术">
+                            <img src="https://via.placeholder.com/600x400" alt="实验室">
+                        </div>
+                        <p class="author">作者：科技观察员 | 发布时间：2023-06-20</p>
+                    </div>
+
+                    <!-- 更多新闻项 -->
+                </div>
+
+                <div class="right-column">
+                    <h4>热点推荐</h4>
+                    <div class="hot-news">
+                        <a href="#">5G技术深度解析</a>
+                        <img src="https://via.placeholder.com/300x200" alt="5G技术">
+                    </div>
+                    <!-- 更多推荐项 -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
