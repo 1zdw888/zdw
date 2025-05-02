@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转幽美校园</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #87CEEB, #1E90FF);
+            perspective: 1500px;
+        }
+
+        .container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            transform-style: preserve-3d;
+            animation: rotate 20s linear infinite;
+        }
+
+        .container:hover {
+            animation-play-state: paused;
+        }
+
+        .photo {
+            position: absolute;
+            width: 350px;
+            height: 500px;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .photo::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .photo:hover {
+            transform: translateZ(80px) scale(1.15);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .photo:hover::after {
+            background: rgba(0, 0, 0, 0);
+        }
+
+        .photo:nth-child(1) {
+            transform: rotateY(0deg) translateZ(550px) rotateX(15deg);
+        }
+
+        .photo:nth-child(2) {
+            transform: rotateY(90deg) translateZ(550px) rotateX(-15deg);
+        }
+
+        .photo:nth-child(3) {
+            transform: rotateY(180deg) translateZ(550px) rotateX(15deg);
+        }
+
+        .photo:nth-child(4) {
+            transform: rotateY(270deg) translateZ(550px) rotateX(-15deg);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .text {
+            font-size: 36px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">幽美校园</div>
+    <div class="container">
+        <div class="photo">
+            <img src="鲁大.jpg" alt="鲁大校园1">
+        </div>
+        <div class="photo">
+            <img src="鲁大1.jpg" alt="鲁大校园2">
+        </div>
+        <div class="photo">
+            <img src="967f34c12d792dd2105c9070fac973b.jpg" alt="鲁大校园3">
+        </div>
+        <div class="photo">
+            <img src="鲁大4.jpg" alt="鲁大校园4">
+        </div>
+    </div>
+</body>
+
+</html>    
