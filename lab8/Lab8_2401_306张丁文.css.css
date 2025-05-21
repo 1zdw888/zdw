@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.student-list {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    /* 添加隐藏样式 */
+    display: none; 
+}
+
+.student-list p {
+    margin: 0 0 10px 0;
+    color: #555;
+}
+
+.student-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.student-list ul li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.student-list ul li:last-child {
+    border-bottom: none;
+}
+
+.selected-student {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.selected-student p {
+    margin: 0 0 10px 0;
+    color: #555;
+}
+
+.selected-student span {
+    font-size: 18px;
+    color: #007BFF;
+}
